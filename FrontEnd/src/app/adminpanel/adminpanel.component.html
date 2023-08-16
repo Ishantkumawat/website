@@ -1,0 +1,60 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let agent of travelAgents">
+        <td>{{ agent.userId }}</td>
+        <td>{{ agent.userName }}</td>
+        <td>{{ agent.userEmail }}</td>
+        <td>{{agent.approvalStatus}}</td>
+
+        
+      </tr>
+    </tbody>
+  </table>
+<hr>  
+  
+
+
+
+
+
+
+<input type="text" [(ngModel)]="userId" placeholder="Enter User ID">
+<button (click)="onToggleApproval()">
+  {{ approvalStatus ? 'Approved' : 'Not Approved' }}
+</button>
+<hr>
+
+
+<body>
+    <div class="image-container">
+        
+
+        <div *ngFor="let image of storedImages" class="card">
+          <img [src]="'data:image/png;base64,' + image.images" class="contentImg">  
+          <div class="card-body">
+          
+          </div>
+        </div>
+      </div>
+      
+      
+        
+       
+        <div class="card">
+            <h1>Gallery</h1>
+          <div class="card-body">
+            <input type="file" (change)="onFileSelected($event)" />
+            <button class="btn btn-primary" (click)="addImg()">Upload</button>
+          </div>
+        </div>
+        
+</body>

@@ -1,0 +1,21 @@
+<body>
+    <div class="image-container">
+        
+
+        <div *ngFor="let image of storedImages" class="card">
+          <img [src]="'data:image/png;base64,' + image.images" class="contentImg">  
+          <div class="card-body">
+          
+          </div>
+        </div>
+      </div>
+      
+      
+        
+       
+        <div class="card">
+            <h1>Gallery</h1>
+
+        </div>
+        
+</body>

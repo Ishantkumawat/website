@@ -1,0 +1,34 @@
+  <div class="container">
+    <h2>Update Your Details</h2>
+    <form [formGroup]="travellerForm" (ngSubmit)="onUpdate()">
+      <div class="form-group">
+        <label for="travellerId">Traveller ID:</label>
+        <input type="number" id="travellerId" formControlName="travellerId" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="travellerName">Traveller Name:</label>
+        <input type="text" id="travellerName" formControlName="travellerName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="travellerEmail">Traveller Email:</label>
+        <input type="email" id="travellerEmail" formControlName="travellerEmail" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="travellerState">Traveller State:</label>
+        <input type="text" id="travellerState" formControlName="travellerState" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="travellerCity">Traveller City:</label>
+        <input type="text" id="travellerCity" formControlName="travellerCity" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="travellerPhone">Traveller Phone:</label>
+        <input type="tel" id="travellerPhone" formControlName="travellerPhone" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="travellerPassword">Traveller Password:</label>
+        <input type="password" id="travellerPassword" formControlName="travellerPassword" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Traveller</button>
+    </form>
+  </div>

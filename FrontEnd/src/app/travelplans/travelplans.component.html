@@ -1,0 +1,39 @@
+
+<div>
+  <input type="text" [(ngModel)]="searchKeyword" placeholder="Search by Tour Name">
+  <button (click)="searchTours()">Search</button>
+</div>
+
+<div class="tour-card-container">
+ 
+  <div class="tour-card" *ngFor="let tour of filteredTours">
+    <div class="tour-image">
+      <img src="../../assets/images/Screenshot.png">
+    </div>
+    <div class="tour-details">
+      <h2>Name: {{ tour.tourName }}</h2>
+      <p>State: {{ tour.tourState }}</p>
+      <p>City: {{ tour.tourCity }}</p>
+      <p>Price: {{ tour.packagePrice }}</p>
+      <br>
+      <button (click)="bookNow(tour.tourId)">Book Now</button>
+    </div>
+    
+  </div>
+  
+</div>
+
+
+<div class="tour-card-container">
+  <div class="tour-card" *ngFor="let tour of tours">
+    <div class="tour-image">
+      <img [src]="tour.agencyImages" alt="Tour Image" *ngIf="tour.agencyImages">
+    </div>
+    <div class="tour-details">
+      <h2>Name:{{ tour.tourName }}</h2>
+      <p>State:{{ tour.tourState }} </p><p>City:{{ tour.tourCity }}</p>
+      <p>Price: {{ tour.packagePrice }}</p> <br>
+      <button (click)="bookNow(tour.tourId)" >Book Now</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+	  
+		<div class="signup">
+		  <form [formGroup]="signupForm" (ngSubmit)="signup()">
+			<label for="chk" aria-hidden="true">Sign up</label>
+			<input type="text" formControlName="userName" placeholder="User name" [(ngModel)]="reguser.userName" required>
+			<input type="email" formControlName="userEmail" placeholder="Email" [(ngModel)]="reguser.userEmail" required>
+			<input type="password" formControlName="password" placeholder="Password" [(ngModel)]="reguser.userPassword" required>
+	  
+			<select formControlName="role" [(ngModel)]="reguser.role">
+			  <option value="" disabled selected>Select User Type</option>
+			  <option value="Traveller">Traveller</option>
+			  <option value="TravelAgency">Agent</option>
+			  <option value="admin">Administrator</option>
+			</select>
+	  
+			<button type="submit">Sign up</button>
+		  </form>
+		</div>
+	  
+		<div class="login">
+		  <form [formGroup]="loginForm" (ngSubmit)="login()">
+			<label for="chk" aria-hidden="true">Login</label>
+			<input type="email" formControlName="userEmail" placeholder="Email" [(ngModel)]="loginuser.userEmail" required>
+			<input type="password" formControlName="password" placeholder="Password" [(ngModel)]="loginuser.userPassword" required>
+			<button (click)="logins()"  type="submit">Login</button>
+		  </form>
+		</div>
+	  </div>
+	  
+
+	  
+	  
+	  
+	  
+	  
+	  
+
+</body>
+</html>

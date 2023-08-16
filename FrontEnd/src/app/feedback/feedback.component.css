@@ -1,0 +1,64 @@
+/* feedback.component.css */
+
+/* Styling for the form container */
+*{
+   
+    box-sizing: border-box;
+    
+  }
+  body{
+   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffea00;
+    
+
+  }
+form {
+  
+  background: linear-gradient(135deg, #00b0f0, #eaff00);
+    max-width: 400px;
+    margin: 5%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px 9px rgba(0, 0, 0, 0.715);
+  }
+  
+  /* Styling for form elements */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 150px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

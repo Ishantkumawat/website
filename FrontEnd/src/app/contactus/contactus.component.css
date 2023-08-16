@@ -1,0 +1,75 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(145deg, #091126  ,#ff0185);
+}
+
+.contact{
+  height: 85vh;
+  width: 75vw;
+  border-radius: 1rem;
+  display: flex;
+  box-shadow: 0 .2rem .5rem #0006;
+  margin-top: 5%;
+
+}
+
+.map,.form{
+  width: 50%;
+  height: 100%;
+ 
+}
+iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem 0 0 1rem;
+}
+.form{
+  background-color: rgba(0, 0, 0, 0.748);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 0 1rem  1rem 0;
+  
+  
+}
+
+.form h1{
+  color: white;
+  font: 500 1.8rem sans-serif ;
+}
+.form input, .form textarea{
+  width: 100%;
+  padding: 1rem;
+  border: .08rem solid rgb(237, 82, 139);
+  border-radius: 2rem;
+  background-color:  unset;
+  font-size: 1rem;
+}
+.form input, .form button, .form textarea {
+  margin-top: .8rem;
+}
+.form textarea{
+  resize: none;
+  color: #fff;
+}
+::placeholder{
+  color: #fff;
+}
+.form button{
+  background-color: #ff0185;
+  padding: 1rem 2rem;
+  color: #fff;
+  border-radius: 2rem;
+  border: none;
+
+}
